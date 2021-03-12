@@ -30,8 +30,17 @@ public class GameModeSelection : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         Debug.Log("Starting Round Up!");
+        sceneToLoad = "PlayerSelection";
+        //PlayerPrefs.SetString("mode", "roundup");
+        StartCoroutine(LoadAsyncScene());
+    }
+
+    public void PlayerSelection()
+    {
+        PlayerPrefs.DeleteAll();
+        Debug.Log("Player Selection");
         sceneToLoad = "RoundUpSettings";
-        PlayerPrefs.SetString("mode", "roundup");
+        //PlayerPrefs.SetString("mode", "roundup");
         StartCoroutine(LoadAsyncScene());
     }
 
@@ -61,7 +70,7 @@ public class GameModeSelection : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         Debug.Log("Starting The Chase!");
-        sceneToLoad = "Zoo";
+        sceneToLoad = "PlayerSelection";
         PlayerPrefs.SetString("mode", "chase");
         PlayerPrefs.SetInt("timer", 60);
 
