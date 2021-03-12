@@ -19,7 +19,9 @@ public struct Character
 }
 public class CharacterSelect : MonoBehaviour
 {
-    public Sprite[] characters;
+    public Sprite character;
+
+    //public Sprite[] characters;
     public Image selectedCharacter;
     private int selectedCharacterIndex = 0;
     // Start is called before the first frame update
@@ -44,7 +46,7 @@ public class CharacterSelect : MonoBehaviour
         {
             float xVal = context.ReadValue<Vector2>().x;
 
-            if (xVal > 0)
+           /* if (xVal > 0)
             {
                 selectedCharacterIndex++;
             }
@@ -63,7 +65,7 @@ public class CharacterSelect : MonoBehaviour
                 selectedCharacterIndex = 0;
             }
 
-            selectedCharacter.sprite = characters[selectedCharacterIndex];
+            selectedCharacter.sprite = characters[selectedCharacterIndex];*/
         }
     }
 

@@ -14,4 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Zoo.unity
     guid: 2523be728a78aa840ab754704e1a8332
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/PlayerSelection.unity
+    guid: 05fc53aff90196c41b2236c3899a7ad2
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 3aa037195bf79ab43ba857b6fa1c43e1, type: 2}
