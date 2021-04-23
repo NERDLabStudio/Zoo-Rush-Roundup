@@ -16,6 +16,10 @@ public class GameMode : MonoBehaviour
     private bool timedGame;
     private bool foundWinner = false;
     private int timeLeft;
+
+    //List<GameObject> players;
+
+    int playerCount;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +37,9 @@ public class GameMode : MonoBehaviour
             timedGame = false;
             timeKeeper.gameObject.SetActive(false);
         }
+
+        playerCount = PlayerPrefs.GetInt("players", 0);
+        Debug.Log("playerCount = " + playerCount);
     }
 
     // Update is called once per frame
@@ -51,6 +58,7 @@ public class GameMode : MonoBehaviour
             {
                 Debug.Log("Times Up!");
                 List<GameObject> players = Camera.main.GetComponent<FollowPlayers>().players;
+                Debug.Log(players.Count);
                 int mostAnimalsCaught = 0;
                 int playerWithMostAnimals = 0;
                 for(int i = 0; i < players.Count; i++)

@@ -21,9 +21,9 @@ public class CharacterSelect : MonoBehaviour
 {
     public Sprite character;
 
-    //public Sprite[] characters;
+    public Sprite[] characters;
     public Image selectedCharacter;
-    private int selectedCharacterIndex = 0;
+    public int selectedCharacterIndex = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,20 +33,26 @@ public class CharacterSelect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Click(InputAction.CallbackContext context)
     {
         Debug.Log("click. context:" + context);
     }
+
+    public void SaveState(){
+        transform.parent.parent.GetComponent<GameModeSelection>().AssignCharacters();
+    }
+    
     public void Navigate(InputAction.CallbackContext context)
     {
         if (context.action.phase == InputActionPhase.Performed)
         {
             float xVal = context.ReadValue<Vector2>().x;
+            //Debug.Log(xVal);
 
-           /* if (xVal > 0)
+            if (xVal > 0)
             {
                 selectedCharacterIndex++;
             }
@@ -65,8 +71,15 @@ public class CharacterSelect : MonoBehaviour
                 selectedCharacterIndex = 0;
             }
 
-            selectedCharacter.sprite = characters[selectedCharacterIndex];*/
+            selectedCharacter.sprite = characters[selectedCharacterIndex];
+            Debug.Log("SCI: " + selectedCharacterIndex);
         }
     }
 
+
+    /*public void OnMove(InputAction.CallbackContext context){
+        float xVal = context.ReadValue<Vector2>().y;
+        Debug.Log(xVal);
+        selectedCharacter.sprite = characters[3];
+    }*/
 }
