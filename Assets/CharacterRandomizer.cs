@@ -12,18 +12,16 @@ public class CharacterRandomizer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject[] gos = GameObject.FindGameObjectsWithTag("Player");
         for(int j = 0; j < PlayerPrefs.GetInt("players", 0); j++){
             manager.playerPrefab = characterPrefabs[PlayerPrefs.GetInt("player" + j, 0)];
             Debug.Log("CR:" + PlayerPrefs.GetInt("player" + j, 0));
             manager.JoinPlayer();
-
-            follower.players = new List<GameObject>();
-
-            for (int i = 0; i < gos.Length; i++)
-            {
-                follower.players.Add(gos[i]);
-            }
+        }
+        GameObject[] gos = GameObject.FindGameObjectsWithTag("Player");
+        follower.players = new List<GameObject>();
+        for (int i = 0; i < gos.Length; i++)
+        {
+            follower.players.Add(gos[i]);
         }
     }
 

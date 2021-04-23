@@ -4889,10 +4889,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterPrefabs:
-  - {fileID: 268887012704594709, guid: 73baad479f43cb640b99b36f0c224624, type: 3}
-  - {fileID: 268887012704594709, guid: 03377b4de948d714b8b0d26099cd929e, type: 3}
-  - {fileID: 268887012704594709, guid: 68dce476aea91054c9c5a072f132d0c1, type: 3}
-  - {fileID: 268887012704594709, guid: e8292563962ca6f4cba682a60b3ce253, type: 3}
+  - {fileID: 1609034954727002224, guid: 6b8a7d2ba99e2ee4c94ef29296c1e2e2, type: 3}
+  - {fileID: 6952294600814176770, guid: 1a15aa93ab58fa142af24d9416a62987, type: 3}
+  - {fileID: 4507310129612528889, guid: 71c7b3d5e61c69c4c92ab91b532eb12b, type: 3}
+  - {fileID: 2528046982498735714, guid: 2f85b2ebd4610dc4aa4c1b8f0e385d84, type: 3}
+  - {fileID: 4793411416498366777, guid: 09f6fcd00762a1343849ff25c4a3e8d3, type: 3}
   manager: {fileID: 1426459064}
   follower: {fileID: 512761428}
 --- !u!1 &1430555889
