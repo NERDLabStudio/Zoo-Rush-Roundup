@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2528046982498735645}
   - component: {fileID: 2528046982498735644}
-  - component: {fileID: 2528046982498735715}
   - component: {fileID: 7462577941976476043}
   - component: {fileID: 1602911807436652680}
   - component: {fileID: 4343330617728555549}
   - component: {fileID: 6802576370023199620}
+  - component: {fileID: 1487329550952813349}
   m_Layer: 0
   m_Name: New Hispanic Male
   m_TagString: Player
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3586189132881652178, guid: 5e6f3cb87491d2d47855dfef68dcafcc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 11e471a67cdf22c479f35d94e2e059c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -88,25 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &2528046982498735715
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2528046982498735714}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d41667d2ae62efd48aaa934ec7822b38, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &7462577941976476043
 Rigidbody2D:
   serializedVersion: 4
@@ -272,7 +253,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.990136, y: 5.6400003}
+    oldSize: {x: 1.75, y: 6.93}
     newSize: {x: 3.3000002, y: 7.271932}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -281,6 +262,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.646, y: 1.43}
   m_EdgeRadius: 0
+--- !u!95 &1487329550952813349
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2528046982498735714}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8b34674f6b7769d42bffe2c4c7208315, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3524743289194950413
 GameObject:
   m_ObjectHideFlags: 0

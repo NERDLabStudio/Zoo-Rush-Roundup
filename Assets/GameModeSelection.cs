@@ -53,7 +53,7 @@ public class GameModeSelection : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         Debug.Log("Starting Round Up!");
-        sceneToLoad = "PlayerSelection 1";
+        sceneToLoad = "PlayerSelection";
         //PlayerPrefs.SetString("mode", "roundup");
         StartCoroutine(LoadAsyncScene());
     }
