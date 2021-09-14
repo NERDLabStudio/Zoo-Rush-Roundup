@@ -13,6 +13,7 @@ public class GameMode : MonoBehaviour
     public EmitterRandomizer masterEmitter;
     public Image winnerImage;
     public GameObject gameFinishedPanel;
+    public Text finalScore;
     private bool timedGame;
     private bool foundWinner = false;
     private int timeLeft;
@@ -64,12 +65,14 @@ public class GameMode : MonoBehaviour
                 int playerWithMostAnimals = 0;
                 for(int i = 0; i < players.Count; i++)
                 {
+                    Debug.Log("Player " + i + " points: " + players[i].GetComponent<Player>().score.getPoints());
                     if(players[i].GetComponent<Player>().score.getPoints() > mostAnimalsCaught)
                     {
                         playerWithMostAnimals = i;
                         mostAnimalsCaught = players[i].GetComponent<Player>().score.getPoints();
                     }
                 }
+                finalScore.text = "Most Animals Caught: " + mostAnimalsCaught;
                 winnerImage.sprite = players[playerWithMostAnimals].GetComponent<Player>().avatar;
                 foundWinner = true;
                 gameFinishedPanel.SetActive(true);

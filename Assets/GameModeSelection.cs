@@ -52,6 +52,7 @@ public class GameModeSelection : MonoBehaviour
     public void StartRoundUp()
     {
         PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetString("mode", "roundup");
         Debug.Log("Starting Round Up!");
         sceneToLoad = "PlayerSelection";
         //PlayerPrefs.SetString("mode", "roundup");
@@ -88,7 +89,7 @@ public class GameModeSelection : MonoBehaviour
         Debug.Log("Timed RoundUp, Here We Go!");
         sceneToLoad = "Zoo";
         PlayerPrefs.SetString("type", "timed");
-        PlayerPrefs.SetInt("timer", 5);
+        PlayerPrefs.SetInt("timer", 60);
 
         StartCoroutine(LoadAsyncScene());
 

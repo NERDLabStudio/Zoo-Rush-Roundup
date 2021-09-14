@@ -79,8 +79,10 @@ public class Net : MonoBehaviour
             transform.position = Vector3.zero;
             transform.SetParent(collision.transform, false);
             transform.parent = collision.gameObject.transform;
+            Debug.Log("Is Tracking Points: " + thrownBy.isPlayerTrackingPoints());
             if (thrownBy.isPlayerTrackingPoints())
             {
+                Debug.Log("made it here");
                 thrownBy.score.SetScore(1);
                 Destroy(this.gameObject, 1);
             }
