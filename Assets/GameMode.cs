@@ -27,6 +27,7 @@ public class GameMode : MonoBehaviour
         type = PlayerPrefs.GetString("type", "none");
         timer = PlayerPrefs.GetInt("timer", 0);
         timeLeft = (int)Time.time + timer;
+        Debug.Log("TIME LEFT = " + timeLeft);
         goal = PlayerPrefs.GetInt("goal", 0);
         if(timer > 0)
         {
