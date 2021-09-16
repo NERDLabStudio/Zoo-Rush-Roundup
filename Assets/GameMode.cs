@@ -29,7 +29,6 @@ public class GameMode : MonoBehaviour
         type = PlayerPrefs.GetString("type", "none");
         timer = PlayerPrefs.GetInt("timer", 0);
         timeLeft = (int)Time.time + timer;
-        Debug.Log("TIME LEFT = " + timeLeft);
         goal = PlayerPrefs.GetInt("goal", 0);
         if(timer > 0)
         {
@@ -42,7 +41,6 @@ public class GameMode : MonoBehaviour
         }
 
         playerCount = PlayerPrefs.GetInt("players", 0);
-        Debug.Log("playerCount = " + playerCount);
     }
 
     // Update is called once per frame
@@ -61,12 +59,10 @@ public class GameMode : MonoBehaviour
             {
                 Debug.Log("Times Up!");
                 List<GameObject> players = Camera.main.GetComponent<FollowPlayers>().players;
-                Debug.Log(players.Count);
                 int mostAnimalsCaught = 0;
                 int playerWithMostAnimals = 0;
                 for(int i = 0; i < players.Count; i++)
                 {
-                    Debug.Log("Player " + i + " points: " + players[i].GetComponent<Player>().score.getPoints());
                     if(players[i].GetComponent<Player>().score.getPoints() > mostAnimalsCaught)
                     {
                         playerWithMostAnimals = i;
@@ -76,7 +72,6 @@ public class GameMode : MonoBehaviour
                 winnerImage.sprite = players[playerWithMostAnimals].GetComponent<Player>().avatar;
                 foundWinner = true;
                 GameObject winnerScoreIcon = players[playerWithMostAnimals].GetComponent<Player>().scoreBox;
-                Debug.Log("WINNER ICON: " + winnerScoreIcon);
                 GameObject winnerIcon = Instantiate(winnerScoreIcon);
                 gameFinishedPanel.SetActive(true);
                 winnerIcon.transform.parent = winnerCanvas.transform;

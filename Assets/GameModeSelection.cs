@@ -89,7 +89,7 @@ public class GameModeSelection : MonoBehaviour
         Debug.Log("Timed RoundUp, Here We Go!");
         sceneToLoad = "Zoo";
         PlayerPrefs.SetString("type", "timed");
-        PlayerPrefs.SetInt("timer", 15);
+        PlayerPrefs.SetInt("timer", 60);
 
         StartCoroutine(LoadAsyncScene());
 
