@@ -4159,6 +4159,7 @@ MonoBehaviour:
   winnerImage: {fileID: 1613499791}
   gameFinishedPanel: {fileID: 1331075587}
   finalScore: {fileID: 1978652674}
+  winnerCanvas: {fileID: 1331075587}
 --- !u!4 &1176971879
 Transform:
   m_ObjectHideFlags: 0
@@ -6822,7 +6823,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1978652674
 MonoBehaviour:
   m_ObjectHideFlags: 0

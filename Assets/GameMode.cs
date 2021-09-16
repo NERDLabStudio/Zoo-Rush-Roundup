@@ -14,6 +14,7 @@ public class GameMode : MonoBehaviour
     public Image winnerImage;
     public GameObject gameFinishedPanel;
     public Text finalScore;
+    public GameObject winnerCanvas;
     private bool timedGame;
     private bool foundWinner = false;
     private int timeLeft;
@@ -72,10 +73,15 @@ public class GameMode : MonoBehaviour
                         mostAnimalsCaught = players[i].GetComponent<Player>().score.getPoints();
                     }
                 }
-                finalScore.text = "Most Animals Caught: " + mostAnimalsCaught;
                 winnerImage.sprite = players[playerWithMostAnimals].GetComponent<Player>().avatar;
                 foundWinner = true;
+                GameObject winnerScoreIcon = players[playerWithMostAnimals].GetComponent<Player>().scoreBox;
+                Debug.Log("WINNER ICON: " + winnerScoreIcon);
+                GameObject winnerIcon = Instantiate(winnerScoreIcon);
                 gameFinishedPanel.SetActive(true);
+                winnerIcon.transform.parent = winnerCanvas.transform;
+                winnerIcon.transform.position = new Vector3(320, 405, 0);
+                winnerIcon.GetComponentInChildren<Text>().text = mostAnimalsCaught.ToString();
             }
         }
         else
@@ -90,6 +96,7 @@ public class GameMode : MonoBehaviour
                     winnerImage.sprite = winner.GetComponent<Player>().avatar;
                     //end game
                     gameFinishedPanel.SetActive(true);
+
                 }
             }
         }
