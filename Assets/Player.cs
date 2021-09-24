@@ -44,6 +44,13 @@ public class Player : MonoBehaviour
             GameObject sb = Instantiate(scoreBox, Camera.main.GetComponent<FollowPlayers>().scorePanel.transform);
             Debug.Log("SB: " + sb.name);
             score = sb.GetComponent<ScoreBox>();
+            int index = sb.transform.GetSiblingIndex();
+            Debug.Log("index = " + index);
+            if(index % 2 == 0){
+                GameObject timer = GameObject.FindGameObjectWithTag("Timer");
+                int timerIndex = timer.transform.GetSiblingIndex();
+                timer.transform.SetSiblingIndex(timerIndex+1);
+            }
             if (PlayerPrefs.GetString("type", "points").Contains("points"))
             {
                 //NUMBER OF CAUGHT ANIMALS?

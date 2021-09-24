@@ -57,8 +57,6 @@ public class FollowPlayers : MonoBehaviour
             newCameraPosition.x = averageX;
 
             transform.position = newCameraPosition;
-            Debug.Log("averageX: " + averageX);
-            Debug.Log("DIFF: " + (maxX - minX));
         }
     }
 
