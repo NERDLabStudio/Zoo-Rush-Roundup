@@ -13,6 +13,8 @@ public class GameMode : MonoBehaviour
     public EmitterRandomizer masterEmitter;
     public Image winnerImage;
     public GameObject gameFinishedPanel;
+    public Text finalScore;
+    public GameObject winnerCanvas;
     private bool timedGame;
     private bool foundWinner = false;
     private int timeLeft;
@@ -39,7 +41,6 @@ public class GameMode : MonoBehaviour
         }
 
         playerCount = PlayerPrefs.GetInt("players", 0);
-        Debug.Log("playerCount = " + playerCount);
     }
 
     // Update is called once per frame
@@ -58,7 +59,6 @@ public class GameMode : MonoBehaviour
             {
                 Debug.Log("Times Up!");
                 List<GameObject> players = Camera.main.GetComponent<FollowPlayers>().players;
-                Debug.Log(players.Count);
                 int mostAnimalsCaught = 0;
                 int playerWithMostAnimals = 0;
                 for(int i = 0; i < players.Count; i++)
@@ -71,7 +71,12 @@ public class GameMode : MonoBehaviour
                 }
                 winnerImage.sprite = players[playerWithMostAnimals].GetComponent<Player>().avatar;
                 foundWinner = true;
+                GameObject winnerScoreIcon = players[playerWithMostAnimals].GetComponent<Player>().scoreBox;
+                GameObject winnerIcon = Instantiate(winnerScoreIcon);
                 gameFinishedPanel.SetActive(true);
+                winnerIcon.transform.parent = winnerCanvas.transform;
+                winnerIcon.transform.position = new Vector3(320, 405, 0);
+                winnerIcon.GetComponentInChildren<Text>().text = mostAnimalsCaught.ToString();
             }
         }
         else
@@ -86,6 +91,7 @@ public class GameMode : MonoBehaviour
                     winnerImage.sprite = winner.GetComponent<Player>().avatar;
                     //end game
                     gameFinishedPanel.SetActive(true);
+
                 }
             }
         }

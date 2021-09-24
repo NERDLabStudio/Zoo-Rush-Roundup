@@ -144,7 +144,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7516557788490262959, guid: 96a70f0dcb002084c91d12d438ecd119, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 12b18619970295d4785e8e39b0815e2b, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -163,9 +163,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2941452301568724613}
-  - component: {fileID: 6327592625382023521}
+  - component: {fileID: 558760201217597636}
   m_Layer: 5
-  m_Name: Female 2 Score
+  m_Name: Male African American Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,7 +192,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 75}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &6327592625382023521
+--- !u!114 &558760201217597636
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -273,7 +273,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: eecda71c5aeeb654e8b24d46d9224e27, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

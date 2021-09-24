@@ -52,6 +52,7 @@ public class GameModeSelection : MonoBehaviour
     public void StartRoundUp()
     {
         PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetString("mode", "roundup");
         Debug.Log("Starting Round Up!");
         sceneToLoad = "PlayerSelection";
         //PlayerPrefs.SetString("mode", "roundup");

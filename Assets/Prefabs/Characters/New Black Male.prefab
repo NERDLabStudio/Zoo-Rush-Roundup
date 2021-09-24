@@ -174,7 +174,7 @@ MonoBehaviour:
   timeBetweenThrows: 1
   inputMovementAmount: 0.01
   scoreBox: {fileID: 3037430197552622782, guid: 764d2ee11147a9e4dbd25f4481f8dcc4, type: 3}
-  score: {fileID: 0}
+  score: {fileID: 558760201217597636, guid: 764d2ee11147a9e4dbd25f4481f8dcc4, type: 3}
   avatar: {fileID: 3542127132570728493, guid: 9d7b1cae3af5c284c9c15ede3511e074, type: 3}
   hand: {fileID: 3094002787789940}
   winner: 0

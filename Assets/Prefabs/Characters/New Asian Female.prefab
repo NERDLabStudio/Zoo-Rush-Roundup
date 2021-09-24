@@ -255,7 +255,7 @@ MonoBehaviour:
   timeBetweenThrows: 1
   inputMovementAmount: 0.01
   scoreBox: {fileID: 3037430197552622782, guid: c807d0bca540f0e48b848270b10f1568, type: 3}
-  score: {fileID: 0}
+  score: {fileID: 7227659949254368505, guid: c807d0bca540f0e48b848270b10f1568, type: 3}
   avatar: {fileID: 57365866442116020, guid: 9d7b1cae3af5c284c9c15ede3511e074, type: 3}
   hand: {fileID: 1499887736996213436}
   winner: 0
@@ -305,7 +305,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4906877237241942411}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.1183171, y: 2.5498903, z: -304.3894}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1609034954727002189}
