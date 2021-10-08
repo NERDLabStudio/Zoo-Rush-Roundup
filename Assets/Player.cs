@@ -50,6 +50,10 @@ public class Player : MonoBehaviour
                 GameObject timer = GameObject.FindGameObjectWithTag("Timer");
                 int timerIndex = timer.transform.GetSiblingIndex();
                 timer.transform.SetSiblingIndex(timerIndex+1);
+            } else if( (index + 1) % 2 == 0) {
+                GameObject timer = GameObject.FindGameObjectWithTag("Timer");
+                int timerIndex = timer.transform.GetSiblingIndex();
+                timer.transform.SetSiblingIndex(0);
             }
             if (PlayerPrefs.GetString("type", "points").Contains("points"))
             {

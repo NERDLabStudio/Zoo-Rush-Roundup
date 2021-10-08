@@ -65,7 +65,7 @@ public class PlayerConfig : MonoBehaviour
             players2.Add(new PlayerSelect(pi));
             //Debug.Log("INPUT: " + players2[0].Character);
         }
-
+Debug.Log("TESTING: " + players2.Count());
         //GameObject gameObject = Instantiate(player);
     }
 

@@ -72,7 +72,6 @@ public class CharacterSelect : MonoBehaviour
             }
 
             selectedCharacter.sprite = characters[selectedCharacterIndex];
-            Debug.Log("SCI: " + selectedCharacterIndex);
         }
     }
 
